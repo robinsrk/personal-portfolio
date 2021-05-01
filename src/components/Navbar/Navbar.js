@@ -7,7 +7,6 @@ import {
   MDBNavbarToggler,
   MDBCollapse,
 } from "mdbreact";
-import Home from "../Home/Home";
 import "./Navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -22,12 +21,7 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <MDBNavbar expand="md" className="navbar">
-        <MDBNavbarBrand>
-          <h1>
-            <strong style={{ color: "#fa6454" }}>Robin</strong>
-          </h1>
-        </MDBNavbarBrand>
+      <MDBNavbar expand="md" dark className="navbar">
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
@@ -42,12 +36,12 @@ class NavbarPage extends Component {
               </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <Link smooth className="m-5 text-white" to={{ Home }}>
+              <Link smooth className="m-5 text-white" to="#blogs">
                 Blogs
               </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <Link smooth className="m-5 text-white" to={{ Home }}>
+              <Link smooth className="m-5 text-white" to="#about">
                 About
               </Link>
             </MDBNavItem>

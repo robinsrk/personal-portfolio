@@ -4,3 +4,8 @@
   color: white;
   font-weight: bold;
 }
+.cards {
+  background-color: transparent;
+  border-radius: 10px;
+  min-height: 500px;
+}
