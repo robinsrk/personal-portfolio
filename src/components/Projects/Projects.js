@@ -9,22 +9,36 @@ const projectList = [
   {
     name: "Robin repair service",
     photo: repairss,
-    features: ["1. "],
+    features: [
+      "1. Dashboard for users and admins with differnt functionalities",
+      "2. Users can see their order history",
+      "3. Admin can see all the order history",
+      "4. Admin can appoint anyone as an admin",
+      "5. Admin can control the order history",
+    ],
   },
   {
     name: "Amar boi online",
     photo: amarboiss,
-    features: ["1. "],
+    features: [
+      "1. Implemented private route, so that users can't order anything without login",
+      "2. Users can see their order history from dashboard",
+      "3. Users can search through the products",
+    ],
   },
   {
     name: "Railgari online",
     photo: railgariss,
-    features: ["1. "],
+    features: [
+      "1. Users can book a train ticket online",
+      "2. Implemented private route, so that users can't order anything without login",
+      "3. Integrated google maps for better route finding",
+    ],
   },
 ];
 const Projects = () => {
   return (
-    <div id="projects">
+    <div id="projects" style={{ backgroundColor: "black" }}>
       <MDBContainer>
         <h1
           style={{

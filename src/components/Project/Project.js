@@ -14,7 +14,7 @@ const Project = ({ projectDetails }) => {
   console.log("projectDetails = ", projectDetails);
   return (
     <MDBCol>
-      <MDBCard style={{ width: "22rem" }}>
+      <MDBCard className="cards" style={{ width: "22rem" }}>
         <MDBCardImage
           className="img-fluid"
           style={{ borderRadius: "10px" }}
