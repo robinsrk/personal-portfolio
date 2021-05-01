@@ -8,6 +8,7 @@ import {
   MDBCardText,
   MDBCol,
 } from "mdbreact";
+import "./Project.css";
 
 const Project = ({ projectDetails }) => {
   console.log("projectDetails = ", projectDetails);
@@ -29,7 +30,12 @@ const Project = ({ projectDetails }) => {
               ))}
             </ul>
           </MDBCardText>
-          <MDBBtn href="#">MDBBtn</MDBBtn>
+          <MDBBtn href="#" className="button">
+            Website
+          </MDBBtn>
+          <MDBBtn href="#" className="button">
+            Source Code
+          </MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </MDBCol>

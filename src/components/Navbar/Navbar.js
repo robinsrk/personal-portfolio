@@ -4,20 +4,9 @@ import {
   MDBNavbarBrand,
   MDBNavbarNav,
   MDBNavItem,
-  MDBNavLink,
   MDBNavbarToggler,
   MDBCollapse,
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
-// import {
-//   Link,
-//   DirectLink,
-//   Element,
-//   Events,
-//   animateScroll as scroll,
-//   scrollSpy,
-//   scroller,
-// } from "react-scroll";
 import Home from "../Home/Home";
 import "./Navbar.css";
 import { HashLink as Link } from "react-router-hash-link";

@@ -1,8 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { MDBContainer } from "mdbreact";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Projects from "./components/Projects/Projects";
 
 function App() {
