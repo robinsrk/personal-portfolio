@@ -7,13 +7,11 @@ import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
-    <MDBContainer>
-      <Router className="App">
-        <Navbar />
-        <Route to="/home" component={Home} />
-        <Route to="/projects" component={Projects} />
-      </Router>
-    </MDBContainer>
+    <Router className="App">
+      <Navbar />
+      <Route to="/home" component={Home} />
+      <Route to="/projects" component={Projects} />
+    </Router>
   );
 }
 
