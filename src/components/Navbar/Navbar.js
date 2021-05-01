@@ -7,11 +7,6 @@ import {
   MDBNavLink,
   MDBNavbarToggler,
   MDBCollapse,
-  MDBFormInline,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
 // import {
@@ -24,6 +19,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 //   scroller,
 // } from "react-scroll";
 import Home from "../Home/Home";
+import "./Navbar.css";
 import { HashLink as Link } from "react-router-hash-link";
 
 class NavbarPage extends Component {
@@ -37,9 +33,11 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <MDBNavbar expand="md">
+      <MDBNavbar expand="md" className="navbar">
         <MDBNavbarBrand>
-          <strong className="white-text">Navbar</strong>
+          <h1>
+            <strong style={{ color: "#fa6454" }}>Robin</strong>
+          </h1>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
