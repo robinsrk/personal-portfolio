@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <MDBContainer id="home" className="mt-1">
       <ParticlesBg type="lines" bg={true} />
-      <MDBRow style={{ height: "90vh" }} className="d-flex align-items-center">
+      <MDBRow className="d-flex align-items-center">
         <MDBCol md="6" className="align-items-center">
           <div className="mb-5 d-block" style={{ minHeight: "250px" }}>
             <h1>Hello there!</h1>

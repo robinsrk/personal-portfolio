@@ -3,11 +3,13 @@
   background: #fa6454 !important;
   color: white !important;
 }
-
+#home {
+  padding-top: 200px;
+  height: 90vh;
+}
 .link {
   color: white;
 }
-
 .icon {
   background-color: #fa6454;
 }
