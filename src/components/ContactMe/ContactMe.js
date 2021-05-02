@@ -1,9 +1,9 @@
 import React from "react";
 import emailjs from "emailjs-com";
 
-import "./ContactUs.css";
+import "./ContactMe.css";
 
-export default function ContactUs() {
+export default function ContactMe() {
   function sendEmail(e) {
     e.preventDefault();
 

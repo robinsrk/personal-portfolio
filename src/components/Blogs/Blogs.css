@@ -1,0 +1,10 @@
+#blogs {
+  background-color: black;
+  height: 100vh;
+  padding-top: 100px;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+  color: #fa6454;
+}

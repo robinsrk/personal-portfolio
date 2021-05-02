@@ -3,7 +3,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Projects from "./components/Projects/Projects";
-import ContactUs from "./components/ContactUs/ContactUs";
+import ContactMe from "./components/ContactMe/ContactMe";
+import Blogs from "./components/Blogs/Blogs";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Navbar />
         <Route to="/home" component={Home} />
         <Route to="/projects" component={Projects} />
-        <Route to="/contactus" component={ContactUs} />
+        <Route to="/blogs" component={Blogs} />
+        <Route to="/contactus" component={ContactMe} />
       </Router>
     </div>
   );
