@@ -38,7 +38,10 @@ const projectList = [
 ];
 const Projects = () => {
   return (
-    <div id="projects" style={{ backgroundColor: "black" }}>
+    <div
+      id="projects"
+      style={{ backgroundColor: "black", paddingTop: "100px" }}
+    >
       <MDBContainer>
         <h1
           style={{
