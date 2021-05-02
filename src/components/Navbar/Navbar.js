@@ -40,8 +40,8 @@ class NavbarPage extends Component {
               </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <Link smooth className="m-5 text-white" to="#about">
-                About
+              <Link smooth className="m-5 text-white" to="#contactus">
+                Contact Us
               </Link>
             </MDBNavItem>
           </MDBNavbarNav>
