@@ -17,7 +17,7 @@ const DecryptName = () => {
     }, 2000);
 
     return () => clearInterval(action);
-  }, []);
+  }, [dencrypt]);
 
   return <div>{result}</div>;
 };
