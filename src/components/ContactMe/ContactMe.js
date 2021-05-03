@@ -40,14 +40,14 @@ export default function ContactMe() {
         <input
           type="text"
           className="input"
-          name="user_name"
+          name="from_name"
           placeholder="Name"
         />
         <br />
         <input
           type="email"
           className="input"
-          name="user_email"
+          name="reply_to"
           placeholder="Email"
         />
         <br />
