@@ -16,7 +16,7 @@ function App() {
         <Route to="/projects" component={Projects} />
         <Route to="/blogs" component={Blogs} />
         <Route to="/about" component={About} />
-        <Route to="/contactus" component={ContactMe} />
+        <Route to="/contact" component={ContactMe} />
       </Router>
     </div>
   );
