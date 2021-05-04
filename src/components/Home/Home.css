@@ -1,7 +1,8 @@
 .download-btn {
   border-radius: 10px !important;
-  background: #fa6454 !important;
+  background: transparent !important;
   color: white !important;
+  border: 2px solid #fa6454;
 }
 #home {
   padding-top: 200px;
@@ -10,6 +11,7 @@
 .link {
   color: white;
 }
-.icon {
-  background-color: #fa6454;
+
+.texts {
+  text-shadow: -1px 0 black, 0 0.5px black, 0.5px 0 black, 0 -1px black;
 }

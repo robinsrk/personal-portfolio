@@ -11,7 +11,7 @@ const Home = () => {
       <ParticlesBg type="lines" bg={true} />
       <MDBRow className="d-flex align-items-center">
         <MDBCol md="6" className="align-items-center">
-          <div className="mb-5 d-block" style={{ minHeight: "250px" }}>
+          <div className="mb-5 d-block texts" style={{ minHeight: "250px" }}>
             <h1>Hello there!</h1>
             <h1>
               I'm

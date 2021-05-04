@@ -1,20 +1,46 @@
-import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import { MDBBtn, MDBContainer, MDBIcon } from "mdbreact";
 import React from "react";
 import "./About.css";
+import profile from "../../images/dp3.png";
+import Experiences from "../Experiences/Experiences";
 
 const About = () => {
   return (
     <div id="about">
       <h1 className="title">About me</h1>
-      <MDBContainer>
-        <MDBRow>
-          <MDBCol>
-            <h4 className="title">Experiences</h4>
-          </MDBCol>
-          <MDBCol>
-            <h4 className="title">Experiences</h4>
-          </MDBCol>
-        </MDBRow>
+      <MDBContainer className="d-flex flex-column justify-content-center">
+        <h3
+          style={{ color: "#fa6454", fontWeight: "bold", marginTop: "100px" }}
+        >
+          Who am I
+        </h3>
+        <div className="d-flex mt-5">
+          <div>
+            <img alt="" src={profile} style={{ width: "300px" }} />
+          </div>
+          <div className="mt-5">
+            <p>Name: Abul Kalam Robin</p>
+            <p> Email: robinsrk3@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <a href="https://www.github.com/robinsrk">
+            <MDBBtn className="social-button">
+              <MDBIcon fab icon="github-alt" className="pr-1" />
+              Github
+            </MDBBtn>
+          </a>
+          <a href="https://www.linkedin.com/in/robinsrk">
+            <MDBBtn className="social-button">
+              <MDBIcon fab icon="linkedin" className="pr-1" />
+              LinkedIn
+            </MDBBtn>
+          </a>
+        </div>
+        <div>
+          <h3 className="text-center mt-5 title">Experiences</h3>
+          <Experiences />
+        </div>
       </MDBContainer>
     </div>
   );

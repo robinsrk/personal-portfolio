@@ -60,5 +60,4 @@ class NavbarPage extends Component {
     );
   }
 }
-
 export default NavbarPage;

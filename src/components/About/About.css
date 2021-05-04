@@ -3,3 +3,8 @@
   background-color: black;
   min-height: 100vh;
 }
+.social-button {
+  padding: 5px;
+  background-color: transparent !important;
+  border: 3px solid #fa6454;
+}
