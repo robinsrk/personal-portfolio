@@ -8,14 +8,20 @@ import c from "../../images/c.svg";
 import html from "../../images/html.svg";
 import css from "../../images/css.svg";
 import "./Experiences.css";
-import { MDBCol, MDBRow } from "mdbreact";
+import { MDBCol, MDBRow, MDBTooltip } from "mdbreact";
 
 const Experiences = () => {
   return (
     <MDBRow className="experience-icons d-flex justify-content-center">
       <MDBCol size="12">
-        <img alt="" src={vscode} />
-        <img alt="" src={react} />
+        <MDBTooltip placement="left">
+          <img alt="" src={vscode} />
+          <span>VSCODE</span>
+        </MDBTooltip>
+        <MDBTooltip placement="top">
+          <img alt="" src={react} />
+          <span>React</span>
+        </MDBTooltip>
         <img alt="" src={github} />
         <img alt="" src={node} />
         <img alt="" src={c} />
