@@ -16,6 +16,8 @@ const projectList = [
       "4. Admin can appoint anyone as an admin",
       "5. Admin can control the order history",
     ],
+    github: "https://github.com/robinsrk/robin-repair-service-client",
+    live: "https://robin-computer-service.web.app/",
   },
   {
     name: "Amar boi online",
@@ -25,6 +27,8 @@ const projectList = [
       "2. Users can see their order history from dashboard",
       "3. Users can search through the products",
     ],
+    github: "https://github.com/robinsrk/amar-boi-online-client",
+    live: "https://amar-boi-online.web.app/",
   },
   {
     name: "Railgari online",
@@ -34,6 +38,8 @@ const projectList = [
       "2. Implemented private route, so that users can't order anything without login",
       "3. Integrated google maps for better route finding",
     ],
+    github: "https://github.com/robinsrk/railgari",
+    live: "https://railgari-ticket.web.app/",
   },
 ];
 const Projects = () => {
