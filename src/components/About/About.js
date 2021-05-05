@@ -36,6 +36,12 @@ const About = () => {
               LinkedIn
             </MDBBtn>
           </a>
+          <a href="https://drive.google.com/uc?export=download&id=1J82eg5kzqzshceaPRvlm-7EkFA3l9mc9">
+            <MDBBtn className="social-button">
+              <MDBIcon icon="id-card" className="pr-1" />
+              Resume
+            </MDBBtn>
+          </a>
         </div>
         <div>
           <h3 className="text-center mt-5 title">Experiences</h3>
