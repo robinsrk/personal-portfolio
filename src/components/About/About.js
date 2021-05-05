@@ -3,6 +3,7 @@ import React from "react";
 import "./About.css";
 import profile from "../../images/dp3.png";
 import Experiences from "../Experiences/Experiences";
+import { Bounce, Zoom } from "react-reveal";
 
 const About = () => {
   return (
@@ -15,12 +16,25 @@ const About = () => {
           Who am I
         </h3>
         <div className="d-flex mt-5">
-          <div>
-            <img alt="" src={profile} style={{ width: "300px" }} />
-          </div>
+          <Zoom>
+            <div>
+              <img alt="" src={profile} style={{ width: "300px" }} />
+            </div>
+          </Zoom>
           <div className="mt-5">
-            <p>Name: Abul Kalam Robin</p>
-            <p> Email: robinsrk3@gmail.com</p>
+            <p>
+              <span style={{ color: "#fa6454", fontWeight: "bold" }}>
+                Name:
+              </span>{" "}
+              Abul Kalam Robin
+            </p>
+            <p>
+              <span style={{ color: "#fa6454", fontWeight: "bold" }}>
+                Email:
+              </span>{" "}
+              robinsrk3@gmail.com
+            </p>
+            <p>I am a front end web developer</p>
           </div>
         </div>
         <div>
@@ -44,8 +58,10 @@ const About = () => {
           </a>
         </div>
         <div>
-          <h3 className="text-center mt-5 title">Experiences</h3>
-          <Experiences />
+          <Bounce>
+            <h3 className="text-center mt-5 title">Experiences</h3>
+            <Experiences />
+          </Bounce>
         </div>
       </MDBContainer>
     </div>
