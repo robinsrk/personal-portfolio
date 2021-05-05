@@ -1,5 +1,5 @@
 import React from "react";
-import { Bounce } from "react-reveal";
+import { LightSpeed } from "react-reveal";
 import {
   MDBBtn,
   MDBCard,
@@ -14,7 +14,7 @@ import "./Project.css";
 const Project = ({ projectDetails }) => {
   console.log("projectDetails = ", projectDetails);
   return (
-    <Bounce>
+    <LightSpeed>
       <MDBCol>
         <MDBCard className="cards" style={{ width: "22rem" }}>
           <MDBCardImage
@@ -41,7 +41,7 @@ const Project = ({ projectDetails }) => {
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
-    </Bounce>
+    </LightSpeed>
   );
 };
 
