@@ -32,10 +32,10 @@ const Project = ({ projectDetails }) => {
                 ))}
               </ul>
             </MDBCardText>
-            <MDBBtn href="#" className="button">
+            <MDBBtn href={projectDetails.live} className="button">
               Website
             </MDBBtn>
-            <MDBBtn href="#" className="button">
+            <MDBBtn href={projectDetails.github} className="button">
               Source Code
             </MDBBtn>
           </MDBCardBody>
