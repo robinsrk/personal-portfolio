@@ -59,7 +59,7 @@ const About = () => {
         </div>
         <div>
           <Bounce>
-            <h3 className="text-center mt-5 title">Experiences</h3>
+            <h3 className="text-center mt-5 title">Skills</h3>
             <Experiences />
           </Bounce>
         </div>
