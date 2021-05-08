@@ -9,26 +9,23 @@ import html from "../../images/html.svg";
 import css from "../../images/css.svg";
 import "./Experiences.css";
 import { MDBCol, MDBRow, MDBTooltip } from "mdbreact";
+import Skills from "../Skills/Skills";
 
 const Experiences = () => {
+  const skillList = [
+    { name: "VSCODE", photo: vscode },
+    { name: "React", photo: react },
+    { name: "NODE", photo: node },
+    { name: "Python", photo: python },
+    { name: "C++", photo: c },
+    { name: "HTML", photo: html },
+    { name: "CSS", photo: css },
+  ];
   return (
-    <MDBRow className="experience-icons d-flex justify-content-center">
-      <MDBCol size="12">
-        <MDBTooltip placement="left">
-          <img alt="" src={vscode} />
-          <span>VSCODE</span>
-        </MDBTooltip>
-        <MDBTooltip placement="top">
-          <img alt="" src={react} />
-          <span>React</span>
-        </MDBTooltip>
-        <img alt="" src={github} />
-        <img alt="" src={node} />
-        <img alt="" src={c} />
-        <img alt="" src={python} />
-        <img alt="" src={html} />
-        <img alt="" src={css} />
-      </MDBCol>
+    <MDBRow className="d-flex justify-content-center">
+      {skillList.map((skill) => (
+        <Skills skill={skill}></Skills>
+      ))}
     </MDBRow>
   );
 };
