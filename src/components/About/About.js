@@ -1,4 +1,4 @@
-import { MDBBtn, MDBContainer, MDBIcon } from "mdbreact";
+import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBRow } from "mdbreact";
 import React from "react";
 import "./About.css";
 import profile from "../../images/dp3.png";
@@ -15,12 +15,12 @@ const About = () => {
         >
           Who am I
         </h3>
-        <div className="d-flex mt-5">
-          <Zoom>
-            <div>
+        <MDBRow className="d-flex mt-5">
+          <MDBCol>
+            <Zoom>
               <img alt="" src={profile} style={{ width: "300px" }} />
-            </div>
-          </Zoom>
+            </Zoom>
+          </MDBCol>
           <div className="mt-5">
             <p>
               <span style={{ color: "#fa6454", fontWeight: "bold" }}>
@@ -34,9 +34,13 @@ const About = () => {
               </span>{" "}
               robinsrk3@gmail.com
             </p>
-            <p>I am a front end web developer</p>
+            <p>
+              Dedicated and efficient MERN stack develoepr with experiences in
+              NextJS, React Native, TypeScript. Seeking to further improve HTML5
+              and CSS3 as the future full stack developer.
+            </p>
           </div>
-        </div>
+        </MDBRow>
         <div>
           <a href="https://www.github.com/robinsrk">
             <MDBBtn className="social-button">
@@ -59,7 +63,16 @@ const About = () => {
         </div>
         <div>
           <Bounce>
-            <h3 className="text-center mt-5 title">Skills</h3>
+            <h3
+              style={{
+                color: "#fa6454",
+                fontWeight: "bold",
+                marginTop: "100px",
+                paddingBottom: "50px",
+              }}
+            >
+              Skills
+            </h3>
             <Experiences />
           </Bounce>
         </div>
