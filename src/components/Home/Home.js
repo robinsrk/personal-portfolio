@@ -36,7 +36,7 @@ const Home = () => {
           >
             <MDBBtn className="download-btn p-2" size="sm">
               <MDBIcon size="2x" className="icon" icon="arrow-down">
-                Download my cv
+                <span> Download my resume</span>
               </MDBIcon>
             </MDBBtn>
           </a>
