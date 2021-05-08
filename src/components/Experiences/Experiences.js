@@ -7,8 +7,7 @@ import python from "../../images/python.svg";
 import c from "../../images/c.svg";
 import html from "../../images/html.svg";
 import css from "../../images/css.svg";
-import "./Experiences.css";
-import { MDBCol, MDBRow, MDBTooltip } from "mdbreact";
+import { MDBRow } from "mdbreact";
 import Skills from "../Skills/Skills";
 
 const Experiences = () => {
@@ -16,6 +15,7 @@ const Experiences = () => {
     { name: "VSCODE", photo: vscode },
     { name: "React", photo: react },
     { name: "NODE", photo: node },
+    { name: "Github", photo: github },
     { name: "Python", photo: python },
     { name: "C++", photo: c },
     { name: "HTML", photo: html },
