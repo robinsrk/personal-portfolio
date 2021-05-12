@@ -23,21 +23,23 @@ const Project = ({ projectDetails }) => {
             src={projectDetails.photo}
             waves
           />
-          <MDBCardBody>
+          <MDBCardBody className="d-flex flex-column">
             <MDBCardTitle>{projectDetails.name}</MDBCardTitle>
-            <MDBCardText>
+            <MDBCardText className="mb-auto">
               <ul>
                 {projectDetails.features.map((ft) => (
                   <li>{ft}</li>
                 ))}
               </ul>
             </MDBCardText>
-            <MDBBtn href={projectDetails.live} className="button">
-              Website
-            </MDBBtn>
-            <MDBBtn href={projectDetails.github} className="button">
-              Source Code
-            </MDBBtn>
+            <div>
+              <MDBBtn href={projectDetails.live} className="download-btn">
+                Website
+              </MDBBtn>
+              <MDBBtn href={projectDetails.github} className="download-btn">
+                Source Code
+              </MDBBtn>
+            </div>
           </MDBCardBody>
         </MDBCard>
       </MDBCol>

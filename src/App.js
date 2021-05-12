@@ -6,7 +6,6 @@ import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Blogs from "./components/Blogs/Blogs";
 import About from "./components/About/About";
-
 function App() {
   return (
     <div className="App">
