@@ -1,7 +1,7 @@
 import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBRow } from "mdbreact";
 import React from "react";
 import "./Home.css";
-import image from "../../images/dp3.png";
+import image from "../../images/dp.png";
 
 import ParticlesBg from "particles-bg";
 import DecryptName from "./DecryptName";

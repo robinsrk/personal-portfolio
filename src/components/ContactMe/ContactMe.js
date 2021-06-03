@@ -1,12 +1,10 @@
 import React from "react";
 import emailjs from "emailjs-com";
-
 import "./ContactMe.css";
 
 export default function ContactMe() {
   function sendEmail(e) {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_robinsrk3",
@@ -23,7 +21,6 @@ export default function ContactMe() {
         }
       );
   }
-
   return (
     <div id="contactus" className="pt-5">
       <h1

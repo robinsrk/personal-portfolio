@@ -1,7 +1,7 @@
 import { MDBBtn, MDBCol, MDBContainer, MDBIcon, MDBRow } from "mdbreact";
 import React from "react";
 import "./About.css";
-import profile from "../../images/dp3.png";
+import profile from "../../images/dp.png";
 import Experiences from "../Experiences/Experiences";
 import { Bounce, Zoom } from "react-reveal";
 
