@@ -31,27 +31,27 @@ class NavbarPage extends Component {
           <MDBNavbarNav right>
             <MDBNavItem active>
               <Link className="m-5 text-white texts" smooth to="#home">
-                Home
+                &lt;Header /&gt;
               </Link>
             </MDBNavItem>
             <MDBNavItem>
               <Link smooth className="m-5 text-white texts" to="#projects">
-                Projects
+                &lt;Projects /&gt;
               </Link>
             </MDBNavItem>
             <MDBNavItem>
               <Link smooth className="m-5 text-white texts" to="#blogs">
-                Blogs
+                &lt;Blogs /&gt;
               </Link>
             </MDBNavItem>
             <MDBNavItem>
               <Link smooth className="m-5 text-white texts" to="#about">
-                About
+                &lt;About /&gt;
               </Link>
             </MDBNavItem>
             <MDBNavItem>
               <Link smooth className="m-5 text-white texts" to="#contactus">
-                Contact Me
+                &lt;Footer /&gt;
               </Link>
             </MDBNavItem>
           </MDBNavbarNav>

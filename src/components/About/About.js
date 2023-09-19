@@ -32,12 +32,17 @@ const About = () => {
               <span style={{ color: "#fa6454", fontWeight: "bold" }}>
                 Email:
               </span>{" "}
-              robinsrk3@gmail.com
+              abul.kalam.robin.dev@gmail.com
             </p>
             <p>
-              Dedicated and efficient MERN stack develoepr with experiences in
-              NextJS, React Native, TypeScript. Seeking to further improve HTML5
-              and CSS3 as the future full stack developer.
+              I'm a fresh flutter developer excited to kickstart my career. My
+              goal is to work on mobile apps using flutter, making them
+              user-friendly and cool. I want to join a fun team, keep learning,
+              and improve my skills while working on interesting projects. I aim
+              to create great apps that people love to use and stay up-to-date
+              with all the cool stuff in mobile app development. I'm ready to be
+              a helpful member of the team, help the company succeed, and grow
+              in my career in the world of mobile app making.
             </p>
           </div>
         </MDBRow>

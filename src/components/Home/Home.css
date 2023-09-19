@@ -6,7 +6,7 @@
 }
 #home {
   padding-top: 200px;
-  height: 90vh;
+  height: 100vh;
 }
 .link {
   color: white;
@@ -14,4 +14,25 @@
 
 .texts {
   text-shadow: -1px 0 black, 0 0.5px black, 0.5px 0 black, 0 -1px black;
+}
+.flower__head {
+  position: relative;
+}
+.flower__head {
+  /* width: 120px;
+  height: 40px; */
+  border-radius: 20px;
+  background: var(--main-flower);
+  margin-top: 50px;
+}
+
+.flower__head::after,
+.flower__head::before {
+  content: '';
+  position: absolute;
+  background: var(--main-flower);
+  border-radius: 20px;
+  /* width: 120px;
+  height: 40px; */
+  transform: rotate(60deg);
 }
