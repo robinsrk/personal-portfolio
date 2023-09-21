@@ -44,24 +44,19 @@ const projectList = [
 ];
 const Projects = () => {
   return (
-    <div
-      id="projects"
-      style={{ backgroundColor: "black", paddingTop: "100px" }}
-    >
+    <div id="projects" style={{ backgroundColor: "black" }}>
       <MDBContainer>
         <h1
           style={{
             color: "#fa6454",
             textAlign: "center",
             fontWeight: "bold",
+            padding: "100px",
           }}
         >
           My Projects
         </h1>
-        <MDBRow
-          className="d-flex align-items-center justify-content-center"
-          style={{ minHeight: "95vh" }}
-        >
+        <MDBRow className="d-flex align-items-center justify-content-center">
           {projectList.map((pt) => (
             <MDBCol sm="8" md="6" lg="4">
               <Project projectDetails={pt} />

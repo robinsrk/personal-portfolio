@@ -6,14 +6,16 @@ import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Blogs from "./components/Blogs/Blogs";
 import About from "./components/About/About";
+import ParticlesBg from "particles-bg";
 function App() {
   return (
     <div className="App">
+      <ParticlesBg type="random" color="#000000" bg={true} />
       <Router>
         <Navbar />
         <Route to="/home" component={Home} />
         <Route to="/projects" component={Projects} />
-        <Route to="/blogs" component={Blogs} />
+        {/* <Route to="/blogs" component={Blogs} /> */}
         <Route to="/about" component={About} />
         <Route to="/contact" component={ContactMe} />
       </Router>

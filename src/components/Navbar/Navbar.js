@@ -39,11 +39,11 @@ class NavbarPage extends Component {
                 &lt;Projects /&gt;
               </Link>
             </MDBNavItem>
-            <MDBNavItem>
+            {/* <MDBNavItem>
               <Link smooth className="m-5 text-white texts" to="#blogs">
                 &lt;Blogs /&gt;
               </Link>
-            </MDBNavItem>
+            </MDBNavItem> */}
             <MDBNavItem>
               <Link smooth className="m-5 text-white texts" to="#about">
                 &lt;About /&gt;
