@@ -33,7 +33,7 @@ const Home = () => {
                   textAlign: "center",
                   color: "#4A0BDB",
                   fontFamily: "Lobster",
-                  fontSize: "6vw",
+                  fontSize: "6vh",
                   fontWeight: "bolder",
                 }}
               >
@@ -44,14 +44,11 @@ const Home = () => {
           </strong>
         </h1>
         <br />
-        <h2>I work on</h2>
-        <h1>
-          <strong>
-            <span style={{ color: "#4A0BDB", fontWeight: "bolder" }}>
-              <DecryptName />
-            </span>
-          </strong>
-        </h1>
+        <h2>
+          <span style={{ color: "#4A0BDB", fontWeight: "bolder" }}>
+            <DecryptName />
+          </span>
+        </h2>
         <a
           href="https://drive.google.com/uc?export=download&id=1p94ZmJeAkQUXz3U5KPSAm1wBjwzYF86r"
           download
@@ -63,7 +60,7 @@ const Home = () => {
             className="download-btn p-2"
             style={{ cursor: "none" }}
           >
-            <MDBIcon size="2x" className="icon" icon="arrow-down">
+            <MDBIcon size="2x" className="icon p-2" icon="arrow-down">
               <span id="resume"> Download my resume</span>
             </MDBIcon>
           </MDBBtn>

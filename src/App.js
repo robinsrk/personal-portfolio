@@ -26,7 +26,7 @@ function App() {
     //   </Router>
     // </div>
     <div data-cursor-color="white" className="App">
-      {/* <ParticlesBg type="random" color="#06050a" bg={true} /> */}
+      <ParticlesBg type="lines" color="#06050a" bg={true} />
       <Router>
         <SimpleNestedExample />
       </Router>
