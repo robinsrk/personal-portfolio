@@ -54,7 +54,7 @@ const Home = () => {
           download
           className="link"
         >
-          <MDBBtn
+          <div
             data-cursor-color="#4A0BDB"
             data-cursor-size="50"
             className="download-btn p-2"
@@ -63,7 +63,7 @@ const Home = () => {
             <MDBIcon size="2x" className="icon p-2" icon="arrow-down">
               <span id="resume"> Download my resume</span>
             </MDBIcon>
-          </MDBBtn>
+          </div>
         </a>
       </div>
       {/* <MDBCol
