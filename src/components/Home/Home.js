@@ -12,16 +12,28 @@ const Home = () => {
       id="home"
       className="mt-1 d-flex align-items-center justify-content-center"
     >
-      <div className="mb-5 d-block texts">
+      <div
+        data-cursor-stick="#download"
+        data-cursor-color="white"
+        style={{
+          minWidth: "100vw !important",
+          textAlign: "start",
+          color: "white",
+        }}
+        className="mb-5 d-block texts"
+      >
         <h1>Hello there!</h1>
         <h1>
           I'm
           <strong>
             <Link to="#about" smooth>
               <span
+                id="name"
                 style={{
-                  color: "#fa6454",
-                  fontFamily: "Monaco",
+                  textAlign: "center",
+                  color: "#4A0BDB",
+                  fontFamily: "Lobster",
+                  fontSize: "6vw",
                   fontWeight: "bolder",
                 }}
               >
@@ -35,20 +47,24 @@ const Home = () => {
         <h2>I work on</h2>
         <h1>
           <strong>
-            <span style={{ color: "#fa6454" }}>
+            <span style={{ color: "#4A0BDB", fontWeight: "bolder" }}>
               <DecryptName />
             </span>
           </strong>
         </h1>
         <a
-          // href="https://drive.google.com/uc?export=download&id=1J82eg5kzqzshceaPRvlm-7EkFA3l9mc9"
           href="https://drive.google.com/uc?export=download&id=1p94ZmJeAkQUXz3U5KPSAm1wBjwzYF86r"
           download
           className="link"
         >
-          <MDBBtn className="download-btn p-2" size="sm">
+          <MDBBtn
+            data-cursor-color="#4A0BDB"
+            data-cursor-size="50"
+            className="download-btn p-2"
+            style={{ cursor: "none" }}
+          >
             <MDBIcon size="2x" className="icon" icon="arrow-down">
-              <span> Download my resume</span>
+              <span id="resume"> Download my resume</span>
             </MDBIcon>
           </MDBBtn>
         </a>

@@ -9,6 +9,7 @@ import html from "../../images/html.svg";
 import css from "../../images/css.svg";
 import { MDBRow } from "mdbreact";
 import Skills from "../Skills/Skills";
+import { Bounce } from "react-reveal";
 
 const Experiences = () => {
   const skillList = [
@@ -22,11 +23,27 @@ const Experiences = () => {
     { name: "CSS", photo: css },
   ];
   return (
-    <MDBRow className="d-flex justify-content-center">
-      {skillList.map((skill) => (
-        <Skills skill={skill}></Skills>
-      ))}
-    </MDBRow>
+    <div style={{ minHeight: "50vh" }}>
+      <div>
+        <Bounce>
+          <h3
+            style={{
+              color: "#fa6454",
+              fontWeight: "bold",
+              marginTop: "100px",
+              paddingBottom: "50px",
+            }}
+          >
+            Skills
+          </h3>
+        </Bounce>
+      </div>
+      <MDBRow className="d-flex justify-content-center">
+        {skillList.map((skill) => (
+          <Skills skill={skill}></Skills>
+        ))}
+      </MDBRow>
+    </div>
   );
 };
 

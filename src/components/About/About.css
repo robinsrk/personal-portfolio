@@ -1,7 +1,6 @@
 #about {
   padding-top: 100px;
-  background-color: black;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 .social-button {
   padding: 5px;

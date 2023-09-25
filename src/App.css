@@ -16,7 +16,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.btn, .input, .mask {
+  cursor: none !important;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,6 +34,12 @@
   color: #61dafb;
 }
 
+a {
+  cursor: none !important;
+}
+button {
+  cursor: none;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

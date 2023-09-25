@@ -9,31 +9,27 @@ const About = () => {
   return (
     <div id="about">
       <h1 className="title">About me</h1>
-      <MDBContainer className="d-flex flex-column justify-content-center">
-        <h3
-          style={{ color: "#fa6454", fontWeight: "bold", marginTop: "100px" }}
-        >
-          Who am I
-        </h3>
-        <MDBRow className="d-flex mt-5">
-          <MDBCol>
-            <Zoom>
-              <img alt="" src={profile} style={{ width: "300px" }} />
-            </Zoom>
-          </MDBCol>
-          <div className="mt-5">
-            <p>
-              <span style={{ color: "#fa6454", fontWeight: "bold" }}>
-                Name:
-              </span>{" "}
+      <MDBContainer className="d-flex flex-column justify-content-start">
+        <Zoom>
+          <img alt="" src={profile} style={{ width: "300px" }} />
+        </Zoom>
+        <div className="d-flex align-items-start flex-column mt-5">
+          <p>
+            <span style={{ color: "#fa6454", fontWeight: "bold" }}>Name:</span>{" "}
+            <span style={{ color: "white", fontWeight: "normal" }}>
               Abul Kalam Robin
-            </p>
-            <p>
-              <span style={{ color: "#fa6454", fontWeight: "bold" }}>
-                Email:
-              </span>{" "}
+            </span>{" "}
+          </p>
+          <p>
+            <span style={{ color: "#fa6454", fontWeight: "bold" }}>Email:</span>{" "}
+            <span style={{ color: "white", fontWeight: "normal" }}>
               abul.kalam.robin.dev@gmail.com
-            </p>
+            </span>{" "}
+          </p>
+          <div
+            className="d-flex align-items-start"
+            style={{ textAlign: "start", color: "white", fontWeight: "normal" }}
+          >
             <p>
               I'm a fresh flutter developer excited to kickstart my career. My
               goal is to work on mobile apps using flutter, making them
@@ -45,8 +41,8 @@ const About = () => {
               in my career in the world of mobile app making.
             </p>
           </div>
-        </MDBRow>
-        <div>
+        </div>
+        <div className="d-flex">
           <a href="https://www.github.com/robinsrk">
             <MDBBtn className="social-button">
               <MDBIcon fab icon="github-alt" className="pr-1" />
@@ -65,21 +61,6 @@ const About = () => {
               Resume
             </MDBBtn>
           </a>
-        </div>
-        <div>
-          <Bounce>
-            <h3
-              style={{
-                color: "#fa6454",
-                fontWeight: "bold",
-                marginTop: "100px",
-                paddingBottom: "50px",
-              }}
-            >
-              Skills
-            </h3>
-            <Experiences />
-          </Bounce>
         </div>
       </MDBContainer>
     </div>

@@ -4,6 +4,7 @@ import Project from "../Project/Project";
 import repairss from "../../images/repair.png";
 import railgariss from "../../images/railgari.png";
 import amarboiss from "../../images/amar-boi.png";
+import styles from "./Projects.css";
 
 const projectList = [
   {
@@ -44,11 +45,10 @@ const projectList = [
 ];
 const Projects = () => {
   return (
-    <div id="projects" style={{ backgroundColor: "black" }}>
+    <div id="projects" data-cursor-sticky>
       <MDBContainer>
         <h1
           style={{
-            color: "#fa6454",
             textAlign: "center",
             fontWeight: "bold",
             padding: "100px",

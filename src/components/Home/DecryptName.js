@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { useDencrypt } from "use-dencrypt-effect";
 
-const values = ["JavaScript", "React", "Flutter", "Kotlin"];
+const values = ["JavaScript", "React", "Flutter", "Kotlin", "Jetpack Compose"];
 
 const DecryptName = () => {
   const { result, dencrypt } = useDencrypt();
