@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
+import AnimatedBackground from "./components/AnimatedBackground";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-[#09090b] via-[#18181b] to-[#2e1065] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-[#09090b] via-[#18181b] to-[#2e1065] text-white min-h-screen`}
       >
+        <AnimatedBackground />
         <CustomCursor />
         {children}
       </body>
