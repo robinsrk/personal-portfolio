@@ -38,7 +38,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-2xl font-bold text-purple-400 cursor-pointer hover:text-purple-500 transition-colors relative z-[60]"
+              className="font-space-grotesk text-2xl font-bold text-purple-400 cursor-pointer hover:text-purple-500 transition-colors relative z-[60] tracking-tight"
             >
               Robin
             </button>
@@ -49,7 +49,7 @@ export default function Header() {
                 <button
                   key={item.to}
                   onClick={() => scrollToSection(item.to)}
-                  className="text-[#ccd6f6] hover:text-purple-400 transition-colors cursor-pointer"
+                  className="font-outfit text-[#ccd6f6] hover:text-purple-400 transition-colors cursor-pointer tracking-wide"
                 >
                   {item.name}
                 </button>

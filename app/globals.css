@@ -17,6 +17,9 @@
   --purple: #a855f7;
   --light-purple: #c084fc;
   --dark-purple: #2e1065;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+  --font-fira-code: 'Fira Code', monospace;
 }
 
 * {
@@ -39,6 +42,7 @@ body {
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+  font-family: var(--font-outfit);
 }
 
 main {
@@ -263,4 +267,25 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.font-space-grotesk {
+  font-family: var(--font-space-grotesk);
+}
+
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+
+.font-fira-code {
+  font-family: var(--font-fira-code);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk);
+  font-weight: bold;
+}
+
+code, pre {
+  font-family: var(--font-fira-code);
 }

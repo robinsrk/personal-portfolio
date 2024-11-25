@@ -86,10 +86,10 @@ export default function CustomCursor() {
     <div
       ref={cursorRef}
       style={{ left: 0, top: 0 }}
-      className={`fixed pointer-events-none z-[100] transition-[width,height] duration-200 ${
+      className={`fixed pointer-events-none z-[100] transition-[width,height,background-color] duration-200 ${
         hidden ? 'opacity-0' : 'opacity-100'
       } ${clicked ? 'scale-75' : ''} ${
-        linkHovered ? 'w-8 h-8 bg-purple-400/40' : 'w-5 h-5 bg-purple-400/60'
+        linkHovered ? 'w-8 h-8 bg-purple-400/60' : 'w-5 h-5 bg-white/60'
       } rounded-full backdrop-blur-sm`}
     />
   );
