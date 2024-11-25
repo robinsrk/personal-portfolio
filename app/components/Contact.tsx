@@ -6,7 +6,7 @@ export default function Contact() {
         <div className="max-w-2xl mx-auto">
           <div className="flex flex-col items-center gap-6">
             <p className="text-xl text-[#8892b0] text-center">
-              Interested in working together? Let's discuss your project!
+              Interested in working together? Let&apos;s discuss your project!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a

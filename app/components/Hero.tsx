@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <h2 className="text-xl md:text-2xl text-purple-400 mb-4 animate-fade-in">Hi, I'm</h2>
+          <h2 className="text-xl md:text-2xl text-purple-400 mb-4 animate-fade-in">Hi, I&apos;m</h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-purple-300 text-transparent bg-clip-text">
             Abul Kalam Robin
           </h1>
