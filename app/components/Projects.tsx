@@ -1,7 +1,12 @@
-import Image from 'next/image';
+
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+}
 
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: 'Windsurf IDE',
       description: 'A modern code editor with AI capabilities. Built with Electron and React, featuring real-time collaboration and AI code assistance.',
@@ -44,16 +49,7 @@ export default function Projects() {
               key={index} 
               className="bg-[#18181b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-purple-500/20 group flex flex-col"
             >
-              <div className="h-48 bg-[#27272a] relative overflow-hidden">
-                {project.image && (
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} preview`}
-                    fill
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
-                  />
-                )}
-              </div>
+              <div className="h-48 bg-[#27272a] relative overflow-hidden" />
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold mb-2 text-[#ccd6f6] group-hover:text-purple-400 transition-colors">
                   {project.title}
