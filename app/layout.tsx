@@ -47,8 +47,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${outfit.variable} ${firaCode.variable} font-sans antialiased bg-gradient-to-b from-[#09090b] via-[#18181b] to-[#2e1065] text-white min-h-screen`}
+        className={`${spaceGrotesk.variable} ${outfit.variable} ${firaCode.variable} font-sans antialiased bg-gradient-to-b from-[#09090b] via-purple-900/30 to-purple-900/50 text-white min-h-screen relative`}
       >
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-repeat opacity-10 pointer-events-none" />
         <AnimatedBackground />
         <CustomCursor />
         {children}

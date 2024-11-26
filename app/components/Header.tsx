@@ -38,7 +38,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <button
               onClick={() => scrollToSection('hero')}
-              className="font-space-grotesk text-2xl font-bold text-purple-400 cursor-pointer hover:text-purple-500 transition-colors relative z-[60] tracking-tight"
+              className="font-space-grotesk text-2xl font-bold bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text hover:from-[hsl(250,100%,80%)] hover:to-[hsl(310,100%,80%)] transition-all relative z-[60] tracking-tight"
             >
               Robin
             </button>
@@ -49,7 +49,7 @@ export default function Header() {
                 <button
                   key={item.to}
                   onClick={() => scrollToSection(item.to)}
-                  className="font-outfit text-[#ccd6f6] hover:text-purple-400 transition-colors cursor-pointer tracking-wide"
+                  className="text-lg font-medium text-[#ccd6f6] hover:text-purple-400 transition-colors"
                 >
                   {item.name}
                 </button>
@@ -58,25 +58,12 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-purple-400 z-[60] relative"
+              className="md:hidden relative z-[60] p-2"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
             >
-              <svg
-                className="w-6 h-6 transition-transform duration-300"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+              <div className={`w-6 h-0.5 mb-1.5 transition-all bg-purple-500 ${isOpen ? 'transform rotate-45 translate-y-2' : ''}`} />
+              <div className={`w-6 h-0.5 mb-1.5 transition-all bg-purple-500 ${isOpen ? 'opacity-0' : ''}`} />
+              <div className={`w-6 h-0.5 transition-all bg-purple-500 ${isOpen ? 'transform -rotate-45 -translate-y-2' : ''}`} />
             </button>
           </div>
         </nav>
@@ -96,7 +83,7 @@ export default function Header() {
               <button
                 key={item.to}
                 onClick={() => scrollToSection(item.to)}
-                className="text-[#ccd6f6] hover:text-purple-400 transition-colors cursor-pointer text-3xl font-medium tracking-wider px-8 py-2"
+                className="text-2xl font-medium text-[#ccd6f6] hover:text-purple-400 transition-colors"
               >
                 {item.name}
               </button>

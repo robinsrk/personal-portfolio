@@ -50,7 +50,7 @@ export default function Skills() {
     <section className="min-h-screen py-24 flex items-center justify-center bg-[#18181b]/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text">
             Skills & Technologies
           </h2>
           <p className="text-[#8892b0] max-w-2xl mx-auto">
@@ -58,14 +58,14 @@ export default function Skills() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory">
           {skillCategories.map((category, index) => (
             <div
               key={index}
               className="bg-[#27272a]/50 rounded-xl p-6 border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300
-                        backdrop-blur-sm group hover:transform hover:scale-105"
+                        backdrop-blur-sm group hover:transform hover:scale-105 min-w-[300px] md:min-w-0 snap-center"
             >
-              <h3 className="text-xl font-semibold mb-4 text-purple-400 group-hover:text-purple-300 transition-colors">
+              <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text group-hover:from-[hsl(250,100%,80%)] group-hover:to-[hsl(310,100%,80%)] transition-all">
                 {category.title}
               </h3>
               <ul className="space-y-2">
@@ -75,7 +75,7 @@ export default function Skills() {
                     className="text-[#ccd6f6] flex items-center gap-2 group-hover:translate-x-1 transition-transform"
                   >
                     <svg
-                      className="w-4 h-4 text-purple-500"
+                      className="w-4 h-4 text-[hsl(250,100%,70%)] group-hover:text-[hsl(310,100%,70%)] transition-colors"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

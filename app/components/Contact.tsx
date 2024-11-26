@@ -2,7 +2,9 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-screen py-24 flex items-center justify-center">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-12 text-[#ccd6f6]">Get In Touch</h2>
+        <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text">
+          Get In Touch
+        </h2>
         <div className="max-w-2xl mx-auto">
           <div className="flex flex-col items-center gap-6">
             <p className="text-xl text-[#8892b0] text-center">
@@ -79,6 +81,12 @@ export default function Contact() {
               </a>
             </div>
           </div>
+          <button
+            className="mt-8 px-8 py-3 bg-purple-500 text-white rounded-full font-medium hover:bg-purple-600 transition-colors"
+            onClick={() => window.location.href = 'mailto:abul.kalam.robin.dev@gmail.com'}
+          >
+            Say Hello
+          </button>
         </div>
       </div>
     </section>
