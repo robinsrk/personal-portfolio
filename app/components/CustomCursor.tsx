@@ -26,7 +26,7 @@ export default function CustomCursor() {
       document.removeEventListener('mouseup', onMouseUp);
     };
 
-    let cursor = { x: position.x, y: position.y };
+    const cursor = { x: position.x, y: position.y };
     let animationFrameId: number;
     const smoothFactor = 0.008; // Very slow movement
 
@@ -64,33 +64,41 @@ export default function CustomCursor() {
       setClicked(false);
     };
 
-    const cursorHoverEffect = () => {
-      const links = document.querySelectorAll('a, button, [role="button"]');
-      links.forEach((link) => {
-        link.addEventListener('mouseenter', () => setLinkHovered(true));
-        link.addEventListener('mouseleave', () => setLinkHovered(false));
-      });
+    const onLinkHoverStart = () => {
+      setLinkHovered(true);
+    };
+
+    const onLinkHoverEnd = () => {
+      setLinkHovered(false);
     };
 
     addEventListeners();
-    cursorHoverEffect();
-    animate();
+    animationFrameId = requestAnimationFrame(animate);
+
+    const links = document.querySelectorAll('a, button');
+    links.forEach((link) => {
+      link.addEventListener('mouseenter', onLinkHoverStart);
+      link.addEventListener('mouseleave', onLinkHoverEnd);
+    });
 
     return () => {
       removeEventListeners();
       cancelAnimationFrame(animationFrameId);
+      links.forEach((link) => {
+        link.removeEventListener('mouseenter', onLinkHoverStart);
+        link.removeEventListener('mouseleave', onLinkHoverEnd);
+      });
     };
   }, [position]);
 
   return (
     <div
       ref={cursorRef}
-      style={{ left: 0, top: 0 }}
-      className={`fixed pointer-events-none z-[100] transition-[width,height,background-color] duration-200 ${
+      className={`fixed pointer-events-none z-50 mix-blend-difference transition-transform duration-200 ease-out ${
         hidden ? 'opacity-0' : 'opacity-100'
-      } ${clicked ? 'scale-75' : ''} ${
-        linkHovered ? 'w-8 h-8 bg-purple-400/60' : 'w-5 h-5 bg-white/60'
-      } rounded-full backdrop-blur-sm`}
-    />
+      } ${clicked ? 'scale-75' : ''} ${linkHovered ? 'scale-150' : ''}`}
+    >
+      <div className="w-8 h-8 bg-white rounded-full" />
+    </div>
   );
 }
