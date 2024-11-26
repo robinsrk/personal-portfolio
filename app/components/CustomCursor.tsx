@@ -28,7 +28,7 @@ export default function CustomCursor() {
 
     const cursor = { x: position.x, y: position.y };
     let animationFrameId: number;
-    const smoothFactor = 0.008; // Very slow movement
+    const smoothFactor = 0.85; // Much higher for less lag
 
     const animate = () => {
       const dx = position.x - cursor.x;
@@ -38,7 +38,7 @@ export default function CustomCursor() {
       cursor.y += dy * smoothFactor;
       
       if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate(${cursor.x}px, ${cursor.y}px) translate(-50%, -50%)`;
+        cursorRef.current.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
       }
       
       animationFrameId = requestAnimationFrame(animate);
@@ -75,30 +75,46 @@ export default function CustomCursor() {
     addEventListeners();
     animationFrameId = requestAnimationFrame(animate);
 
-    const links = document.querySelectorAll('a, button');
-    links.forEach((link) => {
-      link.addEventListener('mouseenter', onLinkHoverStart);
-      link.addEventListener('mouseleave', onLinkHoverEnd);
+    // Add hover effect for interactive elements
+    const interactiveElements = document.querySelectorAll(
+      'a, button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    interactiveElements.forEach((element) => {
+      element.addEventListener('mouseenter', onLinkHoverStart);
+      element.addEventListener('mouseleave', onLinkHoverEnd);
     });
 
     return () => {
       removeEventListeners();
       cancelAnimationFrame(animationFrameId);
-      links.forEach((link) => {
-        link.removeEventListener('mouseenter', onLinkHoverStart);
-        link.removeEventListener('mouseleave', onLinkHoverEnd);
+      interactiveElements.forEach((element) => {
+        element.removeEventListener('mouseenter', onLinkHoverStart);
+        element.removeEventListener('mouseleave', onLinkHoverEnd);
       });
     };
   }, [position]);
 
   return (
-    <div
-      ref={cursorRef}
-      className={`fixed pointer-events-none z-50 mix-blend-difference transition-transform duration-200 ease-out ${
-        hidden ? 'opacity-0' : 'opacity-100'
-      } ${clicked ? 'scale-75' : ''} ${linkHovered ? 'scale-150' : ''}`}
-    >
-      <div className="w-8 h-8 bg-white rounded-full" />
-    </div>
+    <>
+      <div
+        ref={cursorRef}
+        className={`fixed top-0 left-0 pointer-events-none z-50 ${
+          hidden ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
+      >
+        <div
+          className={`relative -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500 transition-all duration-50 ${
+            linkHovered ? 'w-8 h-8 bg-opacity-40' : 'w-4 h-4 bg-opacity-80'
+          } ${clicked ? 'scale-75' : 'scale-100'}`}
+        />
+      </div>
+      <style jsx global>{`
+        * {
+          cursor: none !important;
+        }
+      `}</style>
+    </>
   );
 }

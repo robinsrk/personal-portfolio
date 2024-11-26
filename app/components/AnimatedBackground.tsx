@@ -14,6 +14,7 @@ export default function AnimatedBackground() {
 
     // Set canvas size
     const resizeCanvas = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -22,27 +23,27 @@ export default function AnimatedBackground() {
 
     // Particle configuration
     const particles: Particle[] = [];
-    const particleCount = 100; // Increased particle count
+    const particleCount = 100;
     
     class Particle {
-      x: number;
-      y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
-      opacity: number;
-      hue: number;
-      angle: number;
-      angleSpeed: number;
+      x: number = 0;
+      y: number = 0;
+      size: number = 0;
+      speedX: number = 0;
+      speedY: number = 0;
+      opacity: number = 0;
+      hue: number = 0;
+      angle: number = 0;
+      angleSpeed: number = 0;
 
-      constructor() {
-        this.reset();
+      constructor(canvas: HTMLCanvasElement) {
+        this.reset(canvas);
         // Initialize at random positions
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
       }
 
-      reset() {
+      reset(canvas: HTMLCanvasElement) {
         // Start particles from edges for a flowing effect
         const edge = Math.floor(Math.random() * 4);
         switch (edge) {
@@ -64,44 +65,38 @@ export default function AnimatedBackground() {
             break;
         }
 
-        this.size = Math.random() * 3 + 1; // Larger particles
-        this.speedX = Math.random() * 2 - 1;
-        this.speedY = Math.random() * 2 - 1;
-        this.opacity = Math.random() * 0.5 + 0.3; // Increased opacity
-        this.hue = Math.random() * 60 + 250; // Blue to purple range
+        this.size = Math.random() * 2 + 1;
+        this.speedX = (Math.random() - 0.5) * 2;
+        this.speedY = (Math.random() - 0.5) * 2;
+        this.opacity = Math.random() * 0.5 + 0.1;
+        this.hue = Math.random() * 60 + 250; // Purple hues
         this.angle = Math.random() * Math.PI * 2;
-        this.angleSpeed = Math.random() * 0.02 - 0.01;
+        this.angleSpeed = (Math.random() - 0.5) * 0.02;
       }
 
-      update() {
+      update(canvas: HTMLCanvasElement) {
         this.x += this.speedX;
         this.y += this.speedY;
         this.angle += this.angleSpeed;
 
-        // Reset particle when it goes off screen
+        // Reset particle if it's out of bounds
         if (
           this.x < -50 ||
           this.x > canvas.width + 50 ||
           this.y < -50 ||
           this.y > canvas.height + 50
         ) {
-          this.reset();
+          this.reset(canvas);
         }
       }
 
-      draw() {
-        if (!ctx) return;
+      draw(ctx: CanvasRenderingContext2D) {
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.angle);
         
-        // Create gradient for each particle
-        const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size);
-        gradient.addColorStop(0, `hsla(${this.hue}, 100%, 70%, ${this.opacity})`);
-        gradient.addColorStop(1, `hsla(${this.hue}, 100%, 70%, 0)`);
-        
+        ctx.fillStyle = `hsla(${this.hue}, 100%, 70%, ${this.opacity})`;
         ctx.beginPath();
-        ctx.fillStyle = gradient;
         ctx.arc(0, 0, this.size, 0, Math.PI * 2);
         ctx.fill();
         
@@ -111,20 +106,17 @@ export default function AnimatedBackground() {
 
     // Create particles
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(canvas));
     }
 
     // Animation loop
     const animate = () => {
-      if (!ctx) return;
-      
-      // Create fade effect
-      ctx.fillStyle = 'rgba(9, 9, 11, 0.1)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+
+      particles.forEach((particle) => {
+        particle.update(canvas);
+        particle.draw(ctx);
       });
 
       requestAnimationFrame(animate);
@@ -132,6 +124,7 @@ export default function AnimatedBackground() {
 
     animate();
 
+    // Cleanup
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
@@ -140,8 +133,7 @@ export default function AnimatedBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.6 }}
+      className="fixed top-0 left-0 w-full h-full -z-10"
     />
   );
 }
