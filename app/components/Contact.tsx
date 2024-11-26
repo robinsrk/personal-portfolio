@@ -61,6 +61,22 @@ export default function Contact() {
                 </svg>
                 LinkedIn
               </a>
+              <a
+                href="https://fiverr.com/abulkalam.robin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M23 9.73c0-2.09-.49-3.93-1.46-5.52C20.07 2.62 18.53 2 16.9 2c-1.9 0-3.51.76-4.84 2.27-.2.23-.37.46-.52.71-.15-.25-.32-.48-.52-.71C9.69 2.76 8.08 2 6.18 2c-1.63 0-3.17.62-4.64 2.21C.57 5.8.08 7.64.08 9.73c0 1.68.44 3.31 1.32 4.88.72 1.28 1.7 2.43 2.9 3.43 2.42 2 4.88 3.16 7.44 3.96.45.14.92.14 1.37 0 2.56-.8 5.02-1.96 7.44-3.96 1.2-1 2.18-2.15 2.9-3.43.88-1.57 1.32-3.2 1.32-4.88z"/>
+                </svg>
+                Fiverr
+              </a>
             </div>
           </div>
         </div>

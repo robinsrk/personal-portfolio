@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Projects() {
   const projects = [
     {
@@ -38,18 +40,31 @@ export default function Projects() {
         <h2 className="text-4xl font-bold mb-12 text-center text-[#ccd6f6]">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-[#18181b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-purple-500/20 group">
-              <div className="h-48 bg-[#27272a] relative">
-                {/* Add project image here */}
+            <div 
+              key={index} 
+              className="bg-[#18181b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-purple-500/20 group flex flex-col"
+            >
+              <div className="h-48 bg-[#27272a] relative overflow-hidden">
+                {project.image && (
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    fill
+                    className="object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                  />
+                )}
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold mb-2 text-[#ccd6f6] group-hover:text-purple-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-[#8892b0] mb-4">{project.description}</p>
+                <p className="text-[#8892b0] mb-4 flex-1">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-[#18181b] rounded-full text-purple-400 text-sm border border-purple-500">
+                  {project.tech.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="text-sm px-3 py-1 bg-[#27272a] text-purple-400 rounded-full"
+                    >
                       {tech}
                     </span>
                   ))}

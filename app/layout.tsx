@@ -22,6 +22,21 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Abul Kalam Robin - Portfolio",
   description: "Full Stack & Mobile App Developer",
+  icons: {
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+    shortcut: ['/favicon.svg'],
+    apple: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+  },
 };
 
 export default function RootLayout({
