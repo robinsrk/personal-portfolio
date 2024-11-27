@@ -71,14 +71,42 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed md:hidden top-0 left-0 w-full h-screen bg-[#09090b]/95 backdrop-blur-lg transition-all duration-300 z-50 ${
+        className={`fixed md:hidden top-0 left-0 w-full h-screen bg-gradient-to-b from-[#09090b] to-[#2e1065] transition-all duration-300 z-50 ${
           isOpen
             ? 'opacity-100 visible translate-y-0'
             : 'opacity-0 invisible translate-y-[-100%]'
         }`}
+        onClick={() => setIsOpen(false)}
       >
-        <div className="flex flex-col items-center justify-center w-full h-full">
-          <div className="flex flex-col items-center justify-center gap-12 -mt-[var(--header-height)]">
+        <div className="flex flex-col items-center justify-center w-full h-full relative">
+          {/* Cancel Button */}
+          <button
+            className="absolute top-6 right-6 p-2 rounded-full hover:bg-purple-500/10 transition-colors"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsOpen(false);
+            }}
+          >
+            <svg
+              className="w-6 h-6 text-purple-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          
+          <div 
+            className="flex flex-col items-center justify-center gap-12 -mt-[var(--header-height)]"
+            onClick={(e) => e.stopPropagation()}
+          >
             {menuItems.map((item) => (
               <button
                 key={item.to}
