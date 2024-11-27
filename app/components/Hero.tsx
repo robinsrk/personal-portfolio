@@ -12,10 +12,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center">
+    <section id="hero" className="flex items-center justify-center h-[calc(100vh-var(--header-height))]">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <div className="relative w-48 h-48 mx-auto mb-8">
+          <div className="relative w-48 h-48 mx-auto mb-6">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-purple-300 opacity-75 blur-md animate-pulse"></div>
             {/* Add your photo in the public/images directory and update the src path */}
             <Image
@@ -33,7 +33,7 @@ export default function Hero() {
           <h1 className="font-space-grotesk text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text tracking-tight">
             Abul Kalam Robin
           </h1>
-          <div className="font-fira-code text-xl md:text-2xl text-[#8892b0] mb-8 h-20">
+          <div className="font-fira-code text-xl md:text-2xl text-[#8892b0] mb-6 h-16">
             <TypeAnimation
               sequence={[
                 'Full Stack Developer',
@@ -48,20 +48,20 @@ export default function Hero() {
               repeat={Infinity}
             />
           </div>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-4 mb-6 px-4">
             {['TypeScript', 'React', 'Next.js', 'Flutter', 'Jetpack Compose'].map((tech) => (
               <span 
                 key={tech} 
-                className="font-fira-code px-4 py-2 bg-[#18181b] rounded-full text-purple-400 border border-purple-500 hover:bg-purple-500/10 transition-colors text-sm tracking-tight"
+                className="font-fira-code px-4 py-2 bg-[#18181b] rounded-full text-purple-400 border border-purple-500 hover:bg-purple-500/10 transition-colors text-sm tracking-tight whitespace-nowrap"
               >
                 {tech}
               </span>
             ))}
           </div>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-row justify-center gap-4 px-4">
             <button 
               onClick={scrollToContact}
-              className="px-8 py-3 bg-purple-500 text-white rounded-full font-medium hover:bg-purple-600 transition-colors"
+              className="px-4 sm:px-8 py-2 sm:py-3 bg-purple-500 text-white rounded-full font-medium hover:bg-purple-600 transition-colors text-xs sm:text-base whitespace-nowrap"
             >
               Get In Touch
             </button>
@@ -69,7 +69,7 @@ export default function Hero() {
               href="https://www.fiverr.com/s/Zm6lk64"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-space-grotesk bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 tracking-wide inline-flex items-center gap-2"
+              className="font-space-grotesk bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 sm:py-3 px-4 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 tracking-wide inline-flex items-center justify-center gap-2 text-xs sm:text-base whitespace-nowrap"
             >
               <svg
                 className="w-5 h-5"

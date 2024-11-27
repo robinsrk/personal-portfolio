@@ -47,8 +47,8 @@ export default function Projects() {
 
   const ProjectCard = ({ project }: { project: Project }) => (
     <div 
-      className="bg-[#18181b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-purple-500/20 group flex flex-col 
-                w-[calc(100vw-2rem)] md:w-auto flex-shrink-0 snap-center md:snap-align-none mx-2 first:ml-0 last:mr-0"
+      className="bg-[#18181b] rounded-lg overflow-hidden hover:transform hover:scale-105 transition duration-300 border border-purple-500/20 group flex flex-col h-full
+                max-w-full md:max-w-none flex-shrink-0 snap-center md:snap-align-none mx-2 first:ml-0 last:mr-0"
     >
       <div className="h-48 bg-[#27272a] relative overflow-hidden" />
       <div className="p-6 flex-1 flex flex-col">
@@ -76,7 +76,7 @@ export default function Projects() {
         <div className="space-y-8">
           <div className="w-full">
             <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text">Featured Projects</h2>
-            <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4 md:pb-0">
               {featuredProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
@@ -85,7 +85,7 @@ export default function Projects() {
 
           <div className="w-full">
             <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text">Other Projects</h2>
-            <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4 md:pb-0">
               {otherProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}

@@ -5,45 +5,45 @@ export default function Skills() {
       skills: [
         'React.js',
         'Next.js',
-        'TypeScript',
+        'JavaScript',
         'Tailwind CSS',
-        'HTML5/CSS3',
-        'JavaScript (ES6+)',
-      ]
+        'HTML/CSS',
+        'Material UI',
+      ],
+    },
+    {
+      title: 'Backend Development',
+      skills: [
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'PostgreSQL',
+        'RESTful APIs',
+        'GraphQL',
+      ],
     },
     {
       title: 'Mobile Development',
       skills: [
         'Flutter',
         'Dart',
-        'React Native',
         'Jetpack Compose',
-        'Kotlin',
-        'Swift UI',
-      ]
-    },
-    {
-      title: 'UI/UX Design',
-      skills: [
-        'Figma',
-        'Adobe XD',
-        'Responsive Design',
-        'Prototyping',
-        'User Research',
-        'Design Systems',
-      ]
-    },
-    {
-      title: 'Tools & Technologies',
-      skills: [
-        'Git/GitHub',
-        'VS Code',
-        'Docker',
+        'Android Development',
         'Firebase',
-        'AWS',
-        'Vercel',
-      ]
-    }
+        'Material Design',
+      ],
+    },
+    {
+      title: 'Tools & Others',
+      skills: [
+        'Git',
+        'GitHub',
+        'VS Code',
+        'Neovim',
+        'Linux',
+        'Docker',
+      ],
+    },
   ];
 
   return (
@@ -58,12 +58,12 @@ export default function Skills() {
           </p>
         </div>
         
-        <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory">
+        <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto pb-4 md:pb-0 md:overflow-x-visible snap-x snap-mandatory">
           {skillCategories.map((category, index) => (
             <div
               key={index}
               className="bg-[#27272a]/50 rounded-xl p-6 border border-purple-500/10 hover:border-purple-500/30 transition-all duration-300
-                        backdrop-blur-sm group hover:transform hover:scale-105 min-w-[300px] md:min-w-0 snap-center"
+                        backdrop-blur-sm group hover:transform hover:scale-105 w-[280px] md:w-auto snap-center flex-shrink-0 md:flex-shrink"
             >
               <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text group-hover:from-[hsl(250,100%,80%)] group-hover:to-[hsl(310,100%,80%)] transition-all">
                 {category.title}
@@ -103,8 +103,8 @@ export default function Skills() {
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
             {[
-              'React', 'Next.js', 'TypeScript', 'Flutter', 'Kotlin', 'Swift',
-              'Tailwind', 'Firebase', 'AWS', 'Figma', 'Git', 'VS Code'
+              'React', 'Next.js', 'Flutter', 'Jetpack Compose', 'JavaScript', 'Dart',
+              'Tailwind', 'Firebase', 'Git', 'VS Code', 'Neovim', 'Android Studio'
             ].map((tech, index) => (
               <div
                 key={index}

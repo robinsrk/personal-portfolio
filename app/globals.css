@@ -95,8 +95,137 @@ section {
   section {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
-    height: auto;
+    height: calc(100vh - var(--header-height));
     min-height: calc(100vh - var(--header-height));
+    padding: 1rem 0;
+  }
+
+  #hero {
+    height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
+    padding: 1rem 0;
+    overflow: hidden;
+  }
+}
+
+/* High DPI mobile devices */
+@media screen and (max-width: 768px) and (min-resolution: 401dpi),
+       screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2.6) {
+  html {
+    font-size: 20px;
+  }
+  
+  .container {
+    transform: scale(1.3);
+    transform-origin: top center;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+  
+  .h-48 {
+    height: 14rem !important;
+  }
+  
+  .w-48 {
+    width: 14rem !important;
+  }
+  
+  /* Scale up text sizes */
+  .text-4xl {
+    font-size: 2.75rem !important;
+    line-height: 3rem !important;
+  }
+  
+  .text-2xl {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+  }
+  
+  .text-xl {
+    font-size: 1.75rem !important;
+    line-height: 2.25rem !important;
+  }
+  
+  /* Adjust spacing */
+  .p-6 {
+    padding: 2rem !important;
+  }
+  
+  .gap-8 {
+    gap: 2.25rem !important;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2.5rem !important;
+  }
+}
+
+/* Lower DPI mobile devices */
+@media screen and (max-width: 768px) and (-webkit-max-device-pixel-ratio: 2.5),
+       screen and (max-width: 768px) and (max-resolution: 400dpi) {
+  html {
+    font-size: 16px;
+  }
+  
+  .container {
+    transform: scale(1);
+    transform-origin: top center;
+  }
+  
+  section {
+    padding: 1.5rem 0;
+  }
+  
+  .h-48 {
+    height: 12rem !important;
+  }
+  
+  .w-48 {
+    width: 12rem !important;
+  }
+  
+  /* Scale down text sizes */
+  .text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+  
+  .text-xl {
+    font-size: 1.35rem !important;
+    line-height: 1.85rem !important;
+  }
+  
+  /* Adjust spacing */
+  .p-6 {
+    padding: 1.5rem !important;
+  }
+  
+  .gap-8 {
+    gap: 1.75rem !important;
+  }
+  
+  .mb-8 {
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Even lower DPI devices */
+@media screen and (max-width: 768px) and (-webkit-max-device-pixel-ratio: 2),
+       screen and (max-width: 768px) and (max-resolution: 300dpi) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    transform: scale(0.95);
+    transform-origin: top center;
   }
 }
 
