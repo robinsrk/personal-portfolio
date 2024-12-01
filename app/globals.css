@@ -240,40 +240,19 @@ section {
   z-index: 9999;
 }
 
-.cursor-dot {
-  pointer-events: none;
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background-color: var(--white);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s ease-in-out,
-              height 0.2s ease-in-out,
-              background-color 0.3s ease-in-out,
-              transform 0.1s ease-in-out;
-}
-
-.cursor-dot.hovered {
-  background-color: var(--purple);
-  width: 12px;
-  height: 12px;
-}
-
 .cursor-dot-outline {
   pointer-events: none;
   position: fixed;
   width: 32px;
   height: 32px;
-  background-color: var(--white);
+  border: 2px solid rgb(var(--foreground-rgb));
   border-radius: 50%;
-  opacity: 0.3;
+  opacity: 0.5;
   transform: translate(-50%, -50%);
-  transition: width 0.3s ease-in-out,
-              height 0.3s ease-in-out,
-              background-color 0.3s ease-in-out,
-              transform 0.1s ease-in-out,
-              opacity 0.3s ease-in-out;
+  transition: opacity 0.15s ease-in-out,
+              transform 0.15s ease-in-out;
+  z-index: 1000;
+  mix-blend-mode: difference;
 }
 
 .cursor-dot-outline.hovered {
@@ -281,6 +260,26 @@ section {
   opacity: 0.5;
   width: 40px;
   height: 40px;
+}
+
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s ease-in-out,
+              height 0.15s ease-in-out;
+  z-index: 1000;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot.hovered {
+  background-color: var(--purple);
+  width: 12px;
+  height: 12px;
 }
 
 /* Hide default cursor */

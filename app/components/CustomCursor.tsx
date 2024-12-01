@@ -99,7 +99,7 @@ export default function CustomCursor() {
     <>
       <div
         ref={cursorRef}
-        className={`fixed top-0 left-0 pointer-events-none z-50 ${
+        className={`fixed top-0 left-0 pointer-events-none z-[9999] ${
           hidden ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ transform: `translate(${position.x}px, ${position.y}px)` }}

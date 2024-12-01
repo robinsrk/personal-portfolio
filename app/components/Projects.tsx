@@ -8,37 +8,22 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
-      title: 'Windsurf IDE',
-      description: 'A modern code editor with AI capabilities. Built with Electron and React, featuring real-time collaboration and AI code assistance.',
-      tech: ['React', 'Electron', 'TypeScript'],
+      title: 'Dokan',
+      description: 'A modern e-commerce platform built with Next.js 15, featuring product management, shopping cart functionality, and responsive design powered by Tailwind CSS.',
+      tech: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Turbopack'],
       featured: true,
     },
     {
-      title: 'Flutter Social',
-      description: 'A cross-platform social media app built with Flutter. Features include real-time chat, story sharing, and custom animations.',
-      tech: ['Flutter', 'Firebase', 'Dart'],
+      title: 'Peacake',
+      description: 'A feature-rich cake ordering platform with custom order capabilities, user management, and secure checkout process built with Next.js 15 and Supabase.',
+      tech: ['Next.js 15', 'TypeScript', 'Supabase', 'Zustand'],
       featured: true,
     },
     {
-      title: 'AI Chat App',
-      description: 'An AI-powered chat application with natural language processing capabilities, voice recognition, and real-time translation.',
-      tech: ['Next.js', 'OpenAI', 'WebSocket'],
+      title: 'Vorerdak',
+      description: 'A React Native application for managing clients, tracking loans, deposits, and daily transactions with comprehensive financial tracking features.',
+      tech: ['React Native', 'Firebase', 'UI Kitten', 'React Navigation'],
       featured: true,
-    },
-    {
-      title: 'Kotlin Weather',
-      description: 'A modern weather app built with Jetpack Compose. Features include location-based forecasts, weather alerts, and beautiful animations.',
-      tech: ['Kotlin', 'Jetpack Compose', 'OpenWeather API'],
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with features like real-time inventory, payment processing, and admin dashboard.',
-      tech: ['Next.js', 'MongoDB', 'Stripe'],
-    },
-    {
-      title: 'DevOps Dashboard',
-      description: 'A comprehensive DevOps monitoring dashboard with real-time metrics, deployment tracking, and incident management.',
-      tech: ['React', 'GraphQL', 'Docker'],
     },
   ];
 
