@@ -40,7 +40,7 @@ export default function Header() {
               onClick={() => scrollToSection('hero')}
               className="font-space-grotesk text-2xl font-bold bg-gradient-to-r from-[hsl(250,100%,70%)] to-[hsl(310,100%,70%)] text-transparent bg-clip-text hover:from-[hsl(250,100%,80%)] hover:to-[hsl(310,100%,80%)] transition-all relative z-[60] tracking-tight"
             >
-              Robin
+              Robin Dev
             </button>
 
             {/* Desktop Menu */}
